@@ -4,7 +4,6 @@ $(document).ready(function(){
 	if(confirm("are you sure you want to delete?"))
 	{
 		
-		
 	}
 	else {
 		return false;
