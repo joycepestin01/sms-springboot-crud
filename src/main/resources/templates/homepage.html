@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<link th:href="@{/css/homepage.css}" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<meta charset="ISO-8859-1">
+<!-- CSS only -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+	crossorigin="anonymous" />
+
+<title>University of Santo Tomas</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container-fluid bgImage">
+
+			<div class="container homepage-container">
+				<div class="d-flex justify-content-center homepage-heading">
+					<h2 class="ust-heading" data-aos="fade-right">The Pontifical
+						University of Santo Tomas</h2>
+				</div>
+
+				<div class="d-flex justify-content-center text-heading">
+					<p class="text-center justify-content-center ust-heading"
+						data-aos="fade-left">The University of Santo Tomas (also known
+						as UST and officially as the Pontifical and Royal University of
+						Santo Tomas, Manila) is a private, Catholic research university in
+						Manila, Philippines. Founded on April 28, 1611, by Spanish friar
+						Miguel de Benavides, third Archbishop of Manila, it has the oldest
+						extant university charter in the Philippines and in Asia</p>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a th:href="@{/students/}" class="btn btn-primary button-home">Go
+						to Home</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid article-wrapper ">
+		
+			<div class="p-3 d-flex justify-content-center">
+				<!-- <div class="card" style="width: 18rem;">
+					<img src="/images/article1.jpeg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the
+							card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+				
+				<div class="card" style="width: 18rem;">
+					<img src="/images/article2.jpeg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the
+							card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+				
+				<div class="card" style="width: 18rem;">
+					<img src="/images/article2.jpeg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the
+							card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+				
+				<div class="card" style="width: 18rem;">
+					<img src="/images/article2.jpeg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the
+							card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+				 -->
+				
+				
+				
+				<div class="col d-flex justify-content-center inner-column">
+					<a href="https://varsitarian.net/news/20220920/ust-to-open-one-day-covid-19-vax-booster-site-for-thomasians-on-sept-22" target="_blank"><img src="/images/article5.jpg" class="img-fluid article1"
+						data-aos="fade-right" /></a>
+
+				</div>
+				<div class="col d-flex justify-content-center inner-column">
+					<a href="https://varsitarian.net/witness/20221002/increase-your-faith-advincula-urges-santisimo-rosario-parishioners?fbclid=IwAR135LmWr9FEiOrNTgno_8g5TxOW2gD_mmxlJoRzFzN6a2ssULfMTmmAONw"
+					target="_blank"><img src="/images/article4.jpg" class="img-fluid article1"
+						data-aos="fade-right" data-aos-once="false" /></a>
+				</div>
+
+				<div class="col d-flex justify-content-center inner-column">
+					<a href="https://varsitarian.net/sports/athletics/20220929/obiena-eyes-ust-diploma?fbclid=IwAR3DAOZ9Ynu2nINVW-zpUCrL_uU5JxYl_4cKoNfj8gDFqMhDM4F5yipPBQ0" target="_blank">
+					<img src="/images/article3.jpg" class="img-fluid article1"
+						data-aos="fade-right" /></a>
+				</div>
+			</div>
+
+		</div>
+
+		<footer>
+			<div class="footer-wrapper">
+				<p class="text-center footer-text">&copy; COPYRIGHT 2022 .
+					UNIVERSITY OF SANTO TOMAS. ALL RIGHTS RESERVED.</p>
+			</div>
+
+		</footer>
+	</div>
+
+
+
+
+</body>
+
+<!-- JavaScript Bundle with Popper -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+	crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+  duration: 1200, });
+</script>
+
+</html>

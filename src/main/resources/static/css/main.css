@@ -1,0 +1,197 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap')
+	;
+
+@font-face {
+	font-family: 'Blaka';
+	src: url('/fonts/BlakaInk-Regular.ttf') format("truetype");
+}
+
+@font-face {
+	font-family: 'Helvetica';
+	src: url('/fonts/Helvetica.ttf') format("truetype");
+}
+
+@font-face {
+	font-family: 'Helvetica-Bold';
+	src: url('/fonts/Helvetica-Bold.ttf') format("truetype");
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.headline-text {
+	font-size: 30px;
+	margin-top: 1rem;
+}
+
+.header-text {
+	font-size: 14px;
+	font-family: 'Helvetica', sans-serif;
+	color: black;;
+}
+
+/* homepage css */
+.bgImage {
+	background-image: url(/images/ustbg1.1.png);
+	background-position: "center center";
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	height: 70vh;
+}
+
+.ust-heading {
+	font-family: 'Aref Ruqaa Ink', serif;
+	font-size: 2.5rem;
+	color: white;
+}
+
+.homepage-heading {
+	padding-top: 10rem;
+}
+
+.text-heading {
+	padding-left: 5rem;
+}
+
+.button-home {
+	background-color: #2D5553 !important;
+	border-color: #2D5553 !important;
+	box-shadow: 0 0 0 .2rem rgba(91, 194, 194, 0.5);
+	font-family: "Poppins", san serif !important;
+	font-size: 14px !important;
+}
+
+.btn-primary:hover {
+	color: #212529;
+	background-color: #52bebe;
+	border-color: #8ad3d3
+}
+
+.article-wrapper {
+	background-color: #FFC622;
+	height: 55vh;
+}
+
+img.article1 {
+	width: auto;
+	height: 250px;
+	margin-top: 1rem;
+}
+
+/* 
+create student css */
+.text-center {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	margin: 1rem 3rem 1rem 3rem;
+}
+
+.create-student-heading {
+	font-size: 2rem;
+}
+
+.navbar-brand {
+	font-family: 'Aref Ruqaa Ink', serif;
+}
+
+.navbar{
+	background-color: black !important;
+}
+.create-student-home {
+	background-image: url(/images/ustbg1.jpg);
+	/* background-position: "center center"; */
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	height: 100vh;
+}
+
+table {
+	border-radius: 5px;
+}
+
+.submit-button {
+	background-color: #582f0e !important;
+	border-color: #582f0e !important;
+	font-family: "Poppins", san serif !important;
+	font-size: 14px !important;
+}
+
+.addStudent-button {
+	background-color: #2D5553 !important;
+	border-color: #2D5553 !important;
+	font-size: 13px !important;
+	margin-top: 2rem;
+}
+
+.button-wrapper {
+	position: absolute;
+	right: 10px;
+	bottom: -3rem;
+	
+}
+
+/* edit student */
+.update-student {
+	font-family: 'Aref Ruqaa Ink', serif;
+}
+
+.create-student-heading {
+	font-family: 'Aref Ruqaa Ink', serif;
+}
+
+label {
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	color: brown;
+}
+
+/* pagination */
+.search-inputArea {
+	background-color: white;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+	
+}
+
+.footer-text {
+	/* color: white; */
+	
+}

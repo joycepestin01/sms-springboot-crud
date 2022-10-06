@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Management System</title>
+
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+	<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script
+	src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="/js/action.js"></script>
+
+<!-- Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+<body>
+	<div class="create-student-home">
+		<nav class="navbar navbar-expand-md navbar-dark">
+
+			<a th:href="@{/homepage}"> <img
+				src="/images/Seal_of_the_University_of_Santo_Tomas.png" alt="ust"
+				width="auto" height="50" />
+			</a> <a class="navbar-brand px-3" href="#">List of College Students</a>
+
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="collapsibleNavbar"></div>
+		</nav>
+
+		<div class="container">
+
+			<div>
+				<a th:href="@{/students/new}"
+					class="btn btn-primary btn-sm mb-6 addStudent-button"> Add
+					Student</a>
+			</div>
+
+			<div data-aos="fade-up" data-aos-offset="300"
+				data-aos-easing="ease-in-sine">
+				<table class="table table-light table-striped display nowrap"
+					style="width: 100%" id="student_table">
+					<thead class="table-light">
+						<tr>
+							<th class="align-items-center header-text">First Name</th>
+							<th class="header-text">Last Name</th>
+							<th class="header-text">Gender</th>
+							<th class="header-text">Birthday</th>
+							<th class="header-text">Email</th>
+							<th class="header-text">Student Course</th>
+							<th class="header-text">Mobile Number</th>
+							<!-- <th> Student Age </th> -->
+							<th class="header-text">Actions</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr th:each="student: ${students}">
+						
+							<td th:text="${student.firstName}"></td>
+							<td th:text="${student.lastName}" ></td>
+							<td th:text="${student.gender}" ></td>
+							<td th:text="${student.birthday}" ></td>
+							<td th:text="${student.email}" ></td>
+							<td th:text="${student.course}"></td>
+							<td th:text="${student.mobile}"></td>
+							<td><input type="checkbox" name="chkbox"/></td>
+							<!-- <td th:text = "${student.age}"></td> -->
+							<td>
+								<!-- for update -->
+								<a th:href="@{/students/edit/{id}(id=${student.id})}">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+										style="width: 15; height: 15;">
+									<path d="M373.1 24.97C401.2-3.147 446.8-3.147 474.9 24.97L487 37.09C515.1 65.21 515.1 110.8 487 138.9L289.8 336.2C281.1 344.8 270.4 351.1 258.6 354.5L158.6 383.1C150.2 385.5 141.2 383.1 135 376.1C128.9 370.8 126.5 361.8 128.9 353.4L157.5 253.4C160.9 241.6 167.2 230.9 175.8 222.2L373.1 24.97zM440.1 58.91C431.6 49.54 416.4 49.54 407 58.91L377.9 88L424 134.1L453.1 104.1C462.5 95.6 462.5 80.4 453.1 71.03L440.1 58.91zM203.7 266.6L186.9 325.1L245.4 308.3C249.4 307.2 252.9 305.1 255.8 302.2L390.1 168L344 121.9L209.8 256.2C206.9 259.1 204.8 262.6 203.7 266.6zM200 64C213.3 64 224 74.75 224 88C224 101.3 213.3 112 200 112H88C65.91 112 48 129.9 48 152V424C48 446.1 65.91 464 88 464H360C382.1 464 400 446.1 400 424V312C400 298.7 410.7 288 424 288C437.3 288 448 298.7 448 312V424C448 472.6 408.6 512 360 512H88C39.4 512 0 472.6 0 424V152C0 103.4 39.4 64 88 64H200z" /></svg>
+								</a> 
+								
+								<!-- for delete -->
+								<a th:href="@{/students/{id}(id=${student.id})}"> <!-- <input
+									type="checkbox" value="eight">
+									 -->
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				
+					<div class="button-wrapper">
+						<button class="btn btn-danger btnDelete" id="Delrows">Delete</button>
+						<button class="btn btn-primary">Update</button>
+						<!-- <input type="button" value="delete" id="Delrows"/> -->
+					</div>
+				
+
+
+
+			</div>
+
+		</div>
+	</div>
+
+</body>
+<script>
+$(document).ready(function () {
+    $('#student_table').DataTable({
+        scrollY: '200px',
+        scrollCollapse: true,
+        paging: false,
+    });
+});
+</script>
+<script>
+$("#Delrows").click(function(){
+	alert("are you sure u want to delete?");
+     	$("table tbody").find('input[name="chkbox"]').each(function(){
+     		if($(this).is(":checked"))
+     		{
+     			$(this).parents("tr").remove();
+     		}
+     	});	
+});
+</script>
+
+<script>
+  AOS.init();
+</script>
+</html>
+
